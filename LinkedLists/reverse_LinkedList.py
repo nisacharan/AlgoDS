@@ -1,3 +1,7 @@
+
+# This function should reverse linked list and return
+# head of the modified linked list
+
 def reverseList(head):
     # Code here
     prevNode = None
