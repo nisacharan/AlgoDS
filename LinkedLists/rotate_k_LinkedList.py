@@ -16,3 +16,4 @@ def rotateList(head, k):
     newHead = currPntr.next
     currPntr.next = None
     return newHead
+    
