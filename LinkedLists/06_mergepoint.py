@@ -47,9 +47,8 @@ while(ptrA != NULL):
 
 
 def intersetPoint(head_a,head_b):
-    # lenA = count(listA) //iterates list A
-    # lenB = count(listB) //iterates list B
-    
+
+    # getting lengths
     currA = head_a
     currB = head_b
     
@@ -62,12 +61,11 @@ def intersetPoint(head_a,head_b):
         lenB+=1
         currB = currB.next
     
+    # now we adjust either ptrA or ptrB so that they are equally far from the end
 
-    
     currA = head_a
     currB = head_b
     
-    # now we adjust either ptrA or ptrB so that they are equally far from the end
     while(lenA > lenB):
         currA = currA.next
         lenA-=1
@@ -76,6 +74,7 @@ def intersetPoint(head_a,head_b):
         currB = currB.next
         lenB-=1
 
+    # adjusted pointers. Now we go forward till we meet :) 
     while(currB is not None):
         if (currA == currB):
             return currB.data #found merge point
